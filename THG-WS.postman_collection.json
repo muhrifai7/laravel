@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "f40b28dc-9e63-40b9-aab9-f735705875bc",
+		"name": "THG-WS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Membership",
+			"item": [
+				{
+					"name": "Login and Register Allo",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "c20ad4d76fe97759aa27a0c99bff6710",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "redirectPageType",
+									"value": "LOGIN",
+									"description": "LOGIN atau REGISTER mandatory",
+									"type": "text"
+								},
+								{
+									"key": "osType",
+									"value": "ios",
+									"description": "mandatory jika Mobile - andoird atau ios",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "deviceId",
+									"value": "EA7583CD-A667-48BC-B806-42ECB2B48606",
+									"description": "mandatory jika Mobile",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/allo/allo_login_register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"allo",
+								"allo_login_register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Token",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "c20ad4d76fe97759aa27a0c99bff6710",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "7n27ft3ldvwr",
+									"description": "Mandatory - Code dari Response Login/Register",
+									"type": "text"
+								},
+								{
+									"key": "codeVerifier",
+									"value": "fBMRkA8XznzhwMWho2npJeO4reOWpKIzMreF1-xFc1E",
+									"description": "Mandatory - Verifier dari response create auth page allo",
+									"type": "text"
+								},
+								{
+									"key": "equipmentId",
+									"value": "11114525883357867cux1q5xs",
+									"description": "Mandatory jika Web",
+									"type": "text"
+								},
+								{
+									"key": "osType",
+									"value": "ios",
+									"description": "mandatory jika Mobile - andoird atau ios",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "deviceId",
+									"value": "EA7583CD-A667-48BC-B806-42ECB2B48606",
+									"description": "mandatory jika Mobile",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/allo/allo_request_token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"allo",
+								"allo_request_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "c20ad4d76fe97759aa27a0c99bff6710",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refreshToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsImNsaWVudF9pZCI6InN3b3JkIiwiZXhwIjoxNjI2ODgyMDYwLCJuYmYiOjE2MjYyNzcyNjB9.OqfhtmTJ952Qmsobv9bvi-BmVqFeSNeziJBylQX-KKH02novbXmGPgY3L-2eFDBnnbQalRv0R3qq7t8S98vTCw",
+									"description": "Mandatory ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/allo/allo_refresh_token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"allo",
+								"allo_refresh_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Member Allo Profile",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "c20ad4d76fe97759aa27a0c99bff6710",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ0ZW5hbnRfaWQiOiJ0ZW5hbnRfaWQiLCJ1c2VyX2lkIjoiMDAwMjAxMDAwMDAwMDEwODAyIiwidXNlcl9uYW1lIjoiMDgxMzIyMjg4NDc4IiwidG9rZW5fdHlwZSI6ImFjY2Vzc190b2tlbiIsImNsaWVudF9pZCI6InN3b3JkIiwiZXhwIjoxNjI3MTAwMDI1LCJuYmYiOjE2MjYyNzk4OTV9.bXfuG64jEOCUrAvSFvz8-YR9EbOFfmR-bpY1NEutAf5EGFXSRA8llDpIxtaYWZfvSgDbCvs2nbrVkQ3TOPd2mA",
+									"description": "mandatory",
+									"type": "text"
+								},
+								{
+									"key": "refreshToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsImNsaWVudF9pZCI6InN3b3JkIiwiZXhwIjoxNjI2ODg0Njk1LCJuYmYiOjE2MjYyNzk4OTV9.-ly8k5zpeeC8d9_txxAMt37n84HGetktYJPul4A22JFFDElK8u_NyjyzKxJG3JF5HFQY9GY_6rgV5jG7Ustqwg",
+									"description": "mandatory",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/allo/allo_member_profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"allo",
+								"allo_member_profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Other Tools",
+			"item": [
+				{
+					"name": "Create Code Challenge",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "c20ad4d76fe97759aa27a0c99bff6710",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/allo/create_code_challenge",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"allo",
+								"create_code_challenge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Allo Header",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "c20ad4d76fe97759aa27a0c99bff6710",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"requestData\": {\r\n        \"codeChallenge\": \"6c6a69073848106a3065b67c03ecc5fc89b071da6a1fd25ad1cb0ae03fe43baf\",\r\n        \"redirectPageType\": \"REGISTER\"\r\n    },\r\n    \"transactionNo\": \"21030204A08128100000000000000110\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/allo/create_header_allo",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"allo",
+								"create_header_allo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decrypt Header Allo",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "c20ad4d76fe97759aa27a0c99bff6710",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"requestData\": {\r\n        \"sign\": \"66cdbcb3bdd1b861257131879f1c701b6c99808b0b5bda8da04b005049880d0d0aaf1009ea284fc437f783edcaf43b7c9c3d2d37cc3a34f407b310345da4f7f2276b1c2a5d7d5a0ee70e729004f38cf73e54e6f1bc60aeed36ac440fbb3996f3fb41ab977d41ba9fd32a9f986b694700cfc30514b69f414e67f5267007af3b53614cc55dac4958263e0132e62192dadbe1866d55e2d707d953a574133d51e875e5ffcba314d2e8745529a9255820fa77176db87a9aa791e1396b63120240ac170da420167137c252afb2e6ee5798c38cfe33c505cba8de2966c92eb4b49fe9ae9cc8a4397d8e6569cfc7bfd9b74d089b85f19741751208b167e9dc0d73ec3714\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/allo/decrypt_header",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"allo",
+								"decrypt_header"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
